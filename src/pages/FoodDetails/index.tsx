@@ -103,7 +103,7 @@ const FoodDetails: React.FC = () => {
     const findExtra = extras.find(extra => extra.id === id);
 
     if (!findExtra) return;
-    if (findExtra.quantity) return;
+    if (findExtra.quantity === 0) return;
 
     setExtras(
       extras.map(extra =>
